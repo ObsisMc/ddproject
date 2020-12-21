@@ -58,16 +58,15 @@ module keyboard(
 );
 reg [2:0] pre_count=3'b111;
 wire [2:0] count;
-assign count=pre_count;
-
 Inquire_top used1(keyboard_val,i_rst_n,ensure,number_inquire,buy_number);//用户
 enter_pay used2(count,count_in,i_rst_n,buy_count,enterpay);
 manage used3(password,rst,in,re,keyboard_val,count_in,en,reset,number,inquire,re_count);//管理员顶�?
-Bgm used4(i_clk,in,beep);
-key_music used5(i_clk,key_pressed_flag,beep);
+Bgm used4(i_clk,key_pressed_flag,in,beep);
 total_sales used6(total,total_out);
 duringpay dp(enterpay,keyboard_val,paid);
 
+
+assign count=pre_count;
 
 always @(keyboard_val)
 begin
