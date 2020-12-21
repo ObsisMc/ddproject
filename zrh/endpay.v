@@ -1,57 +1,37 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2020/12/14 08:57:45
-// Design Name: 
-// Module Name: countdown
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 module endpay(
 input EN,
 input clk,
-input mode,//0涓轰粯娆炬垚鍔燂紝1涓轰笉鎴愬姛
+input mode,//0为付款成功，1为不成功
 input [3:0] returnone,
 input [3:0] returnten,
 output [7:0] seg_en,
 output [7:0] seg_out,
-output out_endpay
+output reg out_endpay
 );
-    //瀛楃鏄剧ず鏃堕挓鍒嗛锛堜笉鐢ㄦ敼锛?
+    //字符显示时钟分频（不用改）
     reg clkout;
     reg [31:0] cnt;
-    reg [6:0] scan_cnt;//鏄剧ず涓嶅悓瀛楃鐨勮鏁板櫒
+    reg [6:0] scan_cnt;//显示不同字符的计数器
     parameter differentcharperiod=25000;
 
-    //鍒囨崲鏄剧ず
-    reg [15:0] multi3sec;//涓夌鍒囨崲8000x3
+    //切换显示
+    reg [15:0] multi3sec;//三秒切换8000x3
+    reg [1:0] endcounter;//两轮循环，一次加一，加到3结束
     
-    //鏄剧ず
-    reg nextdisplay;//0涓烘樉绀烘彁绀猴紝1涓烘樉绀洪??娆?
+    //显示
+    reg nextdisplay;//0为显示提示，1为显示退款
     reg [7:0] seg_out_r;
     reg [7:0] seg_en_r;
     assign seg_out=~seg_out_r;
     assign seg_en=~seg_en_r;
 
-    //鏄剧ず杩旇繕闆堕挶
+    //显示返还零钱
     wire [7:0] changeonedisplay;
     wire [7:0] changetendisplay;
     num_display changeone(returnone,changeonedisplay);
     num_display changeten(returnten,changetendisplay);
 
-    //瀛楃
+    //字符
     parameter S=7'b1101101;
     parameter U=7'b0111110;
     parameter C=7'b0111001;
@@ -73,6 +53,7 @@ output out_endpay
             cnt<=0;
             multi3sec<=0;
             nextdisplay<=0;
+            endcounter<=0;
         end
         else if(cnt==(differentcharperiod>>1)-1) 
         begin
@@ -83,6 +64,9 @@ output out_endpay
             begin
                 nextdisplay<=~nextdisplay;
                 multi3sec<=0;
+                endcounter<=endcounter+1;
+                if(endcounter==3)
+                out_endpay=1;//直接将out_endpay传出去，在外面将EN变为0
             end
         end
         else

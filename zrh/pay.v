@@ -23,172 +23,134 @@
 module pay(
 input EN,
 input clk,
-input rst,
 input [3:0] paidone,
 input [3:0] paidten,
 input [3:0] costone,
 input [3:0] costten,
 output [7:0] seg_en,
-output [7:0] seg_out
+output [7:0] seg_out,
+output cancel
 );
-    //å­—ç¬¦æ˜¾ç¤ºæ—¶é’Ÿåˆ†é¢‘ï¼ˆä¸ç”¨æ”¹ï¼‰
+    //×Ö·ûÏÔÊ¾Ê±ÖÓ·ÖÆµ£¨²»ÓÃ¸Ä£©
     reg clkout;
     reg [31:0] cnt;
-    reg [6:0] scan_cnt;//æ˜¾ç¤ºä¸åŒå­—ç¬¦çš„è®¡æ•°å™¨
-    parameter differentcharperiod=25000;
+    reg [6:0] scan_cnt;//ÏÔÊ¾²»Í¬×Ö·ûµÄ¼ÆÊıÆ÷
+    parameter differentcharperiod=100000;
 
-    //å€’è®¡æ—¶
+    //µ¹¼ÆÊ±
     reg [31:0] multiplier_timer;
     reg [3:0] onedigit;
     reg [3:0] tendigit; 
+    // wire [7:0] onesdigitdisplay;
     wire [7:0] onesdigitdisplay;
     wire [7:0] tensdigitdisplay;
     
-    //æ»šåŠ¨ç›¸å…³
-    reg [15:0] multiplier_roll;
-    reg [6:0] offset_roll;
-    
-    //æ˜¾ç¤º
-    reg [4:0] seg_en_roll_r;
+    //ÏÔÊ¾
+    reg [7:0] seg_en_r;
     reg [7:0] seg_out_r;
-    reg [1:0] seg_en_time_r;
     assign seg_out=~seg_out_r;
-    assign seg_en={~seg_en_time_r,1'b1,~seg_en_roll_r};
+    assign seg_en=~seg_en_r;
 
-    //å·²ä»˜åº”ä»˜æ˜¾ç¤º
+    //ÒÑ¸¶Ó¦¸¶ÏÔÊ¾
     wire [7:0] paidonedispaly;
     wire [7:0] paidtendispaly;
     wire [7:0] costonedispaly;
     wire [7:0] costtendispaly;
-    
-    //å­—ç¬¦
-    parameter T=7'b0000111;
-    parameter O=7'b0111111;
-    parameter A=7'b1110111;
-    parameter L=7'b0111000;
-    parameter P=7'b1110011;
-    parameter Y=7'b1100110;
 
-    //å€’è®¡æ—¶ä½æ•°è½¬æ¢
+    //µ¹¼ÆÊ±Î»Êı×ª»»
     num_display transone(onedigit,onesdigitdisplay);
     num_display transten(tendigit,tensdigitdisplay);
-    //å·²ä»˜åº”ä»˜è½¬æ¢
+    //ÒÑ¸¶Ó¦¸¶×ª»»
     num_display transone_paid(paidone,paidonedispaly);
     num_display transten_paid(paidten,paidtendispaly);
     num_display transone_cost(costone,costonedispaly);
     num_display tranten_cost(costten,costtendispaly);
 
-    always@(posedge clk,negedge rst)//åˆ†é¢‘è®¡æ•°å™¨
+    reg precancel;
+    assign cancel=precancel;
+
+    always@(posedge clk,negedge EN)//·ÖÆµ¼ÆÊıÆ÷
     begin
-        if(EN)
-        begin
-            if(!rst)
+            if(!EN)
             begin
                 clkout<=0;
                 cnt<=0;
-                multiplier_timer<=0;
-                multiplier_roll<=0;
-                offset_roll<=0;
+                multiplier_timer<=1;
                 onedigit<=0;
                 tendigit<=3;
+                precancel<=0;
             end
             else if(cnt==(differentcharperiod>>1)-1)
             begin
                 cnt<=0;
                 clkout<=~clkout;
-                multiplier_roll<=multiplier_roll+1;
                 multiplier_timer<=multiplier_timer+1;
-                if(multiplier_roll==2800)
+                if(multiplier_timer==2000)
                 begin
-                    multiplier_roll<=0;
-                    offset_roll<=offset_roll+1;
-                    if(offset_roll==13) offset_roll<=0;//åªæœ‰14ä¸ªå­—ç¬¦æ»šåŠ¨
-                end
-                if(multiplier_timer==8000)
-                begin
-                    multiplier_timer<=0;
+                    multiplier_timer<=1;
                     if(onedigit==0) 
                     begin
-                        onedigit<=9;
-                        tendigit<=tendigit-1;
+                        if(tendigit==0)
+                        begin
+                            precancel<=1;
+                        end
+                        else
+                        begin
+                            tendigit<=tendigit-1;
+                            onedigit<=9;  
+                        end
                     end
                     else
-                    onedigit<=onedigit-1;//è¦æ˜¯å€’è®¡æ—¶ç»“æŸè¯¥æ€ä¹ˆæ
+                    onedigit<=onedigit-1;//ÒªÊÇµ¹¼ÆÊ±½áÊø¸ÃÔõÃ´¸ã
                 end
             end
             else
             cnt<=cnt+1;
-        end
-        else
-        cnt<=0;
+            if(paidten>costone||(paidten==costten&&paidone>=costone))
+            precancel<=1;
     end
 
-    always @(posedge clkout)
+    always @(posedge clkout,negedge EN)
     begin
-        if(EN)
-        begin
-            if(!rst)
+            if(!EN)
             scan_cnt<=0;
-            else if(scan_cnt==15) //æ€»å…±16ä¸ªå­—ç¬¦
+            else if(scan_cnt==15) //×Ü¹²16¸ö×Ö·û
             begin
                 scan_cnt<=0;
             end
             else
             scan_cnt<=scan_cnt+1;
-        end
+
     end
 
-//ä½¿èƒ½ä¿¡å·
+//Ê¹ÄÜĞÅºÅ
     always @(scan_cnt)
     begin
-        if(EN)
-        begin
-            if(scan_cnt==14)
-            seg_en_time_r=2'b01;
-            else if(scan_cnt==15)
-            seg_en_time_r=2'b10;
-            else
-            case((scan_cnt+offset_roll)%14)
-            9: seg_en_roll_r=5'b0_0001;
-            10: seg_en_roll_r=5'b0_0010;
-            11: seg_en_roll_r=5'b0_0100;
-            12: seg_en_roll_r=5'b0_1000;
-            13: seg_en_roll_r=5'b1_0000;
-            default: seg_en_roll_r=8'b0000_0000;
-            endcase
-        end
-        else
-        begin
-            seg_en_roll_r=5'b0;
-            seg_en_time_r=2'b0;
-        end
-    end
-
-//æ˜¾ç¤ºçš„å­—ç¬¦
-    always @(scan_cnt)
-    begin
-        if(EN)
-        begin
             case(scan_cnt)
-            0: seg_out_r={1'b0,L};
-            1: seg_out_r={1'b0,A};
-            2: seg_out_r={1'b0,T};
-            3: seg_out_r={1'b0,O};
-            4: seg_out_r={1'b0,T};
-            5: seg_out_r=costonedispaly;
-            6: seg_out_r=costtendispaly;
-            7: seg_out_r=8'b0000_0000;
-            8: seg_out_r={1'b0,Y};
-            9: seg_out_r={1'b0,A};
-            10: seg_out_r={1'b0,P};
-            11: seg_out_r=paidonedispaly;
-            12: seg_out_r=paidtendispaly;
-            13: seg_out_r=8'b0000_0000;
-            14: seg_out_r=onesdigitdisplay;
-            15: seg_out_r=tensdigitdisplay;
+            0: seg_en_r=8'b0000_0001;
+            1: seg_en_r=8'b0000_0010;
+            2: seg_en_r=8'b0000_0100;
+            3: seg_en_r=8'b0000_1000;
+            4: seg_en_r=8'b0001_0000;
+            5: seg_en_r=8'b0010_0000;
+            6 :seg_en_r=8'b0100_0000;
+            7:seg_en_r=8'b1000_0000;
             endcase
-        end
-        else
-        seg_out_r=8'b0000_0000;
+
+    end
+
+//ÏÔÊ¾µÄ×Ö·û
+    always @(scan_cnt)
+    begin
+            case(scan_cnt)
+            0: seg_out_r=onesdigitdisplay;
+            1: seg_out_r=tensdigitdisplay;
+            2: seg_out_r=8'b0000_0000;
+            3: seg_out_r=costonedispaly;
+            4: seg_out_r=costtendispaly;
+            5: seg_out_r=8'b0000_0000;
+            6: seg_out_r=paidonedispaly;
+            7: seg_out_r=paidtendispaly;
+            endcase
     end
 endmodule
