@@ -1,0 +1,1043 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Dec 23 22:17:09 2020
+# Process ID: 5836
+# Current directory: E:/Xlinx/save/finalproject/finalproject.runs/synth_1
+# Command line: vivado.exe -log machinex.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source machinex.tcl
+# Log file: E:/Xlinx/save/finalproject/finalproject.runs/synth_1/machinex.vds
+# Journal file: E:/Xlinx/save/finalproject/finalproject.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source machinex.tcl -notrace
+Command: synth_design -top machinex -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2716 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 331.879 ; gain = 102.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'machinex' [D:/Microsoft VS Code/finalproject/machinex.v:22]
+	Parameter counterdownperiod bound to: -1294967296 - type: integer 
+	Parameter NO_KEY_PRESSED bound to: 6'b000001 
+	Parameter SCAN_COL0 bound to: 6'b000010 
+	Parameter SCAN_COL1 bound to: 6'b000100 
+	Parameter SCAN_COL2 bound to: 6'b001000 
+	Parameter SCAN_COL3 bound to: 6'b010000 
+	Parameter KEY_PRESSED bound to: 6'b100000 
+INFO: [Synth 8-638] synthesizing module 'Bgm' [D:/Microsoft VS Code/finalproject/Bgm.v:23]
+	Parameter L_5 bound to: 17'b01111100100100000 
+	Parameter L_7 bound to: 17'b01100010110111010 
+	Parameter M_1 bound to: 17'b01011101010011110 
+	Parameter M_2 bound to: 17'b01010011001001000 
+	Parameter M_4 bound to: 17'b01000101111001111 
+	Parameter M_3 bound to: 17'b01001010000011111 
+	Parameter M_5 bound to: 17'b00111110010010000 
+	Parameter TIME bound to: 12000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Bgm' (1#1) [D:/Microsoft VS Code/finalproject/Bgm.v:23]
+WARNING: [Synth 8-689] width (2) of port connection 'cantopay' does not match port width (1) of module 'Bgm' [D:/Microsoft VS Code/finalproject/machinex.v:240]
+INFO: [Synth 8-638] synthesizing module 'project_display_top' [D:/Microsoft VS Code/finalproject/project_display_top.v:23]
+WARNING: [Synth 8-567] referenced signal 'seg_en_main' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_main' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_en_select_cust' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_select_cust' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_en_failintopay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_failintopay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_en_replenish' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_replenish' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_en_earn' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_earn' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_en_soldnum' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_soldnum' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_en_pay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_pay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_en_endpay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+WARNING: [Synth 8-567] referenced signal 'seg_out_endpay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/project_display_top.v:147]
+INFO: [Synth 8-638] synthesizing module 'display_main_machine' [D:/Microsoft VS Code/finalproject/display_main_machine.v:23]
+	Parameter price1 bound to: 7'b0110000 
+	Parameter price2 bound to: 7'b1011011 
+	Parameter price3 bound to: 7'b1001111 
+	Parameter differentcharperiod bound to: 25000 - type: integer 
+	Parameter one bound to: 7'b0000110 
+	Parameter two bound to: 7'b1011011 
+	Parameter thr bound to: 7'b1001111 
+	Parameter fou bound to: 7'b1100110 
+	Parameter fiv bound to: 7'b1101101 
+	Parameter six bound to: 7'b1111100 
+	Parameter sev bound to: 7'b0000111 
+	Parameter H bound to: 7'b1110110 
+	Parameter L bound to: 7'b0111000 
+	Parameter e bound to: 7'b1111011 
+	Parameter f bound to: 7'b1110001 
+	Parameter t bound to: 7'b1111000 
+INFO: [Synth 8-638] synthesizing module 'num_display' [D:/Microsoft VS Code/finalproject/num_display.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/num_display.v:29]
+INFO: [Synth 8-256] done synthesizing module 'num_display' (2#1) [D:/Microsoft VS Code/finalproject/num_display.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/display_main_machine.v:107]
+WARNING: [Synth 8-567] referenced signal 'left3' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_main_machine.v:105]
+WARNING: [Synth 8-567] referenced signal 'left2' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_main_machine.v:105]
+WARNING: [Synth 8-567] referenced signal 'left1' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_main_machine.v:105]
+WARNING: [Synth 8-567] referenced signal 'offset' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_main_machine.v:152]
+INFO: [Synth 8-256] done synthesizing module 'display_main_machine' (3#1) [D:/Microsoft VS Code/finalproject/display_main_machine.v:23]
+INFO: [Synth 8-638] synthesizing module 'display_custselect_machine' [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:23]
+	Parameter price1 bound to: 7'b0110000 
+	Parameter price2 bound to: 7'b1011011 
+	Parameter price3 bound to: 7'b1001111 
+	Parameter differentcharperiod bound to: 25000 - type: integer 
+	Parameter one bound to: 7'b0000110 
+	Parameter two bound to: 7'b1011011 
+	Parameter thr bound to: 7'b1001111 
+	Parameter fou bound to: 7'b1100110 
+	Parameter fiv bound to: 7'b1101101 
+	Parameter six bound to: 7'b1111100 
+	Parameter sev bound to: 7'b0000111 
+	Parameter H bound to: 7'b1110110 
+	Parameter L bound to: 7'b0111000 
+	Parameter e bound to: 7'b1111011 
+	Parameter f bound to: 7'b1110001 
+	Parameter t bound to: 7'b1111000 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:108]
+WARNING: [Synth 8-567] referenced signal 'left3' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:106]
+WARNING: [Synth 8-567] referenced signal 'left2' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:106]
+WARNING: [Synth 8-567] referenced signal 'left1' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:106]
+WARNING: [Synth 8-567] referenced signal 'offset' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:154]
+WARNING: [Synth 8-5788] Register scan_cnt_reg in module display_custselect_machine is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:98]
+INFO: [Synth 8-256] done synthesizing module 'display_custselect_machine' (4#1) [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:23]
+INFO: [Synth 8-638] synthesizing module 'failintopay' [D:/Microsoft VS Code/finalproject/display_failintopay.v:21]
+	Parameter differentcharperiod bound to: 25000 - type: integer 
+	Parameter O bound to: 7'b0111111 
+	Parameter L bound to: 7'b0111000 
+	Parameter e bound to: 7'b1111011 
+	Parameter f bound to: 7'b1110001 
+	Parameter t bound to: 7'b1111000 
+	Parameter n bound to: 7'b0110111 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/display_failintopay.v:76]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/display_failintopay.v:90]
+INFO: [Synth 8-256] done synthesizing module 'failintopay' (5#1) [D:/Microsoft VS Code/finalproject/display_failintopay.v:21]
+INFO: [Synth 8-638] synthesizing module 'pay' [D:/Microsoft VS Code/finalproject/pay.v:23]
+	Parameter differentcharperiod bound to: 125000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/pay.v:115]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/pay.v:131]
+WARNING: [Synth 8-567] referenced signal 'onesdigitdisplay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/pay.v:129]
+WARNING: [Synth 8-567] referenced signal 'tensdigitdisplay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/pay.v:129]
+WARNING: [Synth 8-567] referenced signal 'costonedispaly' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/pay.v:129]
+WARNING: [Synth 8-567] referenced signal 'costtendispaly' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/pay.v:129]
+WARNING: [Synth 8-567] referenced signal 'paidonedispaly' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/pay.v:129]
+WARNING: [Synth 8-567] referenced signal 'paidtendispaly' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/pay.v:129]
+INFO: [Synth 8-256] done synthesizing module 'pay' (6#1) [D:/Microsoft VS Code/finalproject/pay.v:23]
+INFO: [Synth 8-638] synthesizing module 'endpay' [D:/Microsoft VS Code/finalproject/endpay.v:1]
+	Parameter differentcharperiod bound to: 25000 - type: integer 
+	Parameter S bound to: 7'b1101101 
+	Parameter U bound to: 7'b0111110 
+	Parameter C bound to: 7'b0111001 
+	Parameter e bound to: 7'b1111011 
+	Parameter d bound to: 7'b1011110 
+	Parameter H bound to: 7'b1110110 
+	Parameter n bound to: 7'b0110111 
+	Parameter g bound to: 7'b1101111 
+	Parameter I bound to: 7'b0110000 
+	Parameter L bound to: 7'b0111000 
+	Parameter F bound to: 7'b1110001 
+	Parameter A bound to: 7'b1110111 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/endpay.v:83]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/endpay.v:101]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/endpay.v:113]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/endpay.v:125]
+WARNING: [Synth 8-567] referenced signal 'nextdisplay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/endpay.v:95]
+WARNING: [Synth 8-567] referenced signal 'mode' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/endpay.v:95]
+WARNING: [Synth 8-567] referenced signal 'changeonedisplay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/endpay.v:95]
+WARNING: [Synth 8-567] referenced signal 'changetendisplay' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/endpay.v:95]
+INFO: [Synth 8-256] done synthesizing module 'endpay' (7#1) [D:/Microsoft VS Code/finalproject/endpay.v:1]
+INFO: [Synth 8-638] synthesizing module 'admin_replenish' [D:/Microsoft VS Code/finalproject/admin_replenish.v:22]
+	Parameter differentcharperiod bound to: 200000 - type: integer 
+	Parameter one bound to: 7'b0000110 
+	Parameter two bound to: 7'b1011011 
+	Parameter thr bound to: 7'b1001111 
+	Parameter fou bound to: 7'b1100110 
+	Parameter fiv bound to: 7'b1101101 
+	Parameter six bound to: 7'b1111100 
+	Parameter sev bound to: 7'b0000111 
+	Parameter H bound to: 7'b1110110 
+	Parameter n bound to: 7'b0110111 
+	Parameter e bound to: 7'b1111011 
+	Parameter d bound to: 7'b1011110 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/admin_replenish.v:89]
+WARNING: [Synth 8-567] referenced signal 'need3' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/admin_replenish.v:87]
+WARNING: [Synth 8-567] referenced signal 'need2' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/admin_replenish.v:87]
+WARNING: [Synth 8-567] referenced signal 'need1' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/admin_replenish.v:87]
+WARNING: [Synth 8-5788] Register scan_cnt_reg in module admin_replenish is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/admin_replenish.v:79]
+INFO: [Synth 8-256] done synthesizing module 'admin_replenish' (8#1) [D:/Microsoft VS Code/finalproject/admin_replenish.v:22]
+WARNING: [Synth 8-689] width (2) of port connection 'behavior' does not match port width (3) of module 'admin_replenish' [D:/Microsoft VS Code/finalproject/project_display_top.v:228]
+INFO: [Synth 8-638] synthesizing module 'earn' [D:/Microsoft VS Code/finalproject/earn.v:22]
+	Parameter differentcharperiod bound to: 25000 - type: integer 
+	Parameter E bound to: 7'b1111001 
+	Parameter n bound to: 7'b0110111 
+	Parameter A bound to: 7'b1110111 
+	Parameter r bound to: 7'b1110000 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/earn.v:83]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/earn.v:97]
+WARNING: [Synth 8-567] referenced signal 'allone' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/earn.v:95]
+WARNING: [Synth 8-567] referenced signal 'allten' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/earn.v:95]
+INFO: [Synth 8-256] done synthesizing module 'earn' (9#1) [D:/Microsoft VS Code/finalproject/earn.v:22]
+INFO: [Synth 8-638] synthesizing module 'display_soldnum' [D:/Microsoft VS Code/finalproject/display_soldnum.v:22]
+	Parameter differentcharperiod bound to: 25000 - type: integer 
+	Parameter one bound to: 7'b0000110 
+	Parameter two bound to: 7'b1011011 
+	Parameter thr bound to: 7'b1001111 
+	Parameter fou bound to: 7'b1100110 
+	Parameter fiv bound to: 7'b1101101 
+	Parameter six bound to: 7'b1111100 
+	Parameter sev bound to: 7'b0000111 
+	Parameter H bound to: 7'b1110110 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/display_soldnum.v:86]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/display_soldnum.v:100]
+WARNING: [Synth 8-567] referenced signal 'sold1display' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_soldnum.v:98]
+WARNING: [Synth 8-567] referenced signal 'sold10display' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_soldnum.v:98]
+WARNING: [Synth 8-567] referenced signal 'good' should be on the sensitivity list [D:/Microsoft VS Code/finalproject/display_soldnum.v:98]
+INFO: [Synth 8-256] done synthesizing module 'display_soldnum' (10#1) [D:/Microsoft VS Code/finalproject/display_soldnum.v:22]
+WARNING: [Synth 8-689] width (2) of port connection 'behavior' does not match port width (3) of module 'display_soldnum' [D:/Microsoft VS Code/finalproject/project_display_top.v:243]
+WARNING: [Synth 8-5788] Register state_reg in module project_display_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/project_display_top.v:93]
+INFO: [Synth 8-256] done synthesizing module 'project_display_top' (11#1) [D:/Microsoft VS Code/finalproject/project_display_top.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'paidone' does not match port width (4) of module 'project_display_top' [D:/Microsoft VS Code/finalproject/machinex.v:261]
+WARNING: [Synth 8-689] width (32) of port connection 'paidten' does not match port width (4) of module 'project_display_top' [D:/Microsoft VS Code/finalproject/machinex.v:262]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/machinex.v:314]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Microsoft VS Code/finalproject/machinex.v:358]
+WARNING: [Synth 8-6014] Unused sequential element clkout_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:163]
+WARNING: [Synth 8-6014] Unused sequential element keyboard_val_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:403]
+WARNING: [Synth 8-6014] Unused sequential element ensure_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:406]
+WARNING: [Synth 8-5788] Register sellnum1_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:182]
+WARNING: [Synth 8-5788] Register count1_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:183]
+WARNING: [Synth 8-5788] Register income_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:76]
+WARNING: [Synth 8-5788] Register sellnum2_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:188]
+WARNING: [Synth 8-5788] Register count2_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:189]
+WARNING: [Synth 8-5788] Register sellnum3_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:194]
+WARNING: [Synth 8-5788] Register count3_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:195]
+WARNING: [Synth 8-5788] Register row_val_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:362]
+WARNING: [Synth 8-5788] Register col_val_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:387]
+WARNING: [Synth 8-5788] Register lastnumber_reg in module machinex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Microsoft VS Code/finalproject/machinex.v:468]
+INFO: [Synth 8-256] done synthesizing module 'machinex' (12#1) [D:/Microsoft VS Code/finalproject/machinex.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 384.477 ; gain = 154.688
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 384.477 ; gain = 154.688
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Microsoft VS Code/finalproject/machine_con.xdc]
+Finished Parsing XDC File [D:/Microsoft VS Code/finalproject/machine_con.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Microsoft VS Code/finalproject/machine_con.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/machinex_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/machinex_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 740.230 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 740.230 ; gain = 510.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 740.230 ; gain = 510.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 740.230 ; gain = 510.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "count_end" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "count_end" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "count_end" is below threshold of ROM address width. It will be mapped to LUTs
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [D:/Microsoft VS Code/finalproject/Bgm.v:50]
+INFO: [Synth 8-5587] ROM size for "count_end" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "count_end" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "count_end" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5545] ROM "seg_en_r" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "offset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "seg_out_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "seg_en_r" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "offset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "seg_out_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "seg_en_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "multiplier_timer" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "onedigit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tendigit" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "seg_en_r" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element tendigit_reg was removed.  [D:/Microsoft VS Code/finalproject/pay.v:61]
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "nextdisplay" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "seg_en_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "seg_en_r" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "seg_out_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "seg_en_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "seg_en_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sellnum1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "income" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "col" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_pressed_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "row_val" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "col_val" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "cantopay" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "intoincomedisplay" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element countdowncnt_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:162]
+WARNING: [Synth 8-6014] Unused sequential element sellnum1_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:182]
+WARNING: [Synth 8-6014] Unused sequential element sellnum2_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:188]
+WARNING: [Synth 8-6014] Unused sequential element sellnum3_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:194]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:284]
+WARNING: [Synth 8-327] inferring latch for variable 'display_r_reg' [D:/Microsoft VS Code/finalproject/num_display.v:30]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/display_main_machine.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/display_custselect_machine.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_en_r_reg' [D:/Microsoft VS Code/finalproject/display_failintopay.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/display_failintopay.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_en_r_reg' [D:/Microsoft VS Code/finalproject/pay.v:51]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/pay.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_en_r_reg' [D:/Microsoft VS Code/finalproject/endpay.v:24]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/endpay.v:23]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/admin_replenish.v:44]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_en_r_reg' [D:/Microsoft VS Code/finalproject/earn.v:39]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/earn.v:38]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_en_r_reg' [D:/Microsoft VS Code/finalproject/display_soldnum.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out_r_reg' [D:/Microsoft VS Code/finalproject/display_soldnum.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [D:/Microsoft VS Code/finalproject/machinex.v:317]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 740.230 ; gain = 510.441
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 12    
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 3     
+	   3 Input      2 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	                7 Bit    Registers := 10    
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 12    
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	  14 Input     16 Bit        Muxes := 1     
+	  12 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 3     
+	  40 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 13    
+	   8 Input      8 Bit        Muxes := 11    
+	  10 Input      8 Bit        Muxes := 1     
+	  25 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 8     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 9     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	  10 Input      4 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 50    
+	   5 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 22    
+	  40 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 5     
+	  25 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module machinex 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 3     
+	   3 Input      2 Bit       Adders := 3     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 4     
+	   7 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 8     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   3 Input      1 Bit        Muxes := 5     
+Module Bgm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  14 Input     16 Bit        Muxes := 1     
+	  12 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 1     
+Module num_display 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      1 Bit        Muxes := 1     
+Module display_main_machine 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	  40 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  40 Input      1 Bit        Muxes := 1     
+Module display_custselect_machine 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  40 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+	  40 Input      1 Bit        Muxes := 1     
+Module failintopay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+Module pay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 1     
+Module endpay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 3     
+	  10 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
+Module admin_replenish 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  25 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	  25 Input      1 Bit        Muxes := 1     
+Module earn 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+Module display_soldnum 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+Module project_display_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "offset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "seg_en_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "offset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/Microsoft VS Code/finalproject/pay.v:73]
+WARNING: [Synth 8-6014] Unused sequential element multiplier_timer_reg was removed.  [D:/Microsoft VS Code/finalproject/pay.v:74]
+WARNING: [Synth 8-6014] Unused sequential element tendigit_reg was removed.  [D:/Microsoft VS Code/finalproject/pay.v:61]
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "nextdisplay" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "intoincomedisplay" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element income_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:76]
+WARNING: [Synth 8-6014] Unused sequential element used/count_reg was removed.  [D:/Microsoft VS Code/finalproject/Bgm.v:50]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:284]
+WARNING: [Synth 8-6014] Unused sequential element countdowncnt_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:162]
+WARNING: [Synth 8-6014] Unused sequential element sellnum3_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:194]
+WARNING: [Synth 8-6014] Unused sequential element sellnum2_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:188]
+WARNING: [Synth 8-6014] Unused sequential element sellnum1_reg was removed.  [D:/Microsoft VS Code/finalproject/machinex.v:182]
+INFO: [Synth 8-3886] merging instance 'sumpaid_reg[1]' (FDCE) to 'sumpaid_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\used/count_end_reg[16] )
+INFO: [Synth 8-3886] merging instance 'display/endpaydisplay/changeten/display_r_reg[0]' (LD) to 'display/endpaydisplay/changeten/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/paydisplay/transten_paid/display_r_reg[0]' (LD) to 'display/paydisplay/transten_paid/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/paydisplay/tranten_cost/display_r_reg[0]' (LD) to 'display/paydisplay/tranten_cost/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/soldnumdisplay/goodnum/display_r_reg[0]' (LD) to 'display/soldnumdisplay/goodnum/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/soldnumdisplay/displayleft2/display_r_reg[0]' (LD) to 'display/soldnumdisplay/displayleft2/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/earndisplay/at/display_r_reg[0]' (LD) to 'display/earndisplay/at/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/replensihdisplay/displayleft2/display_r_reg[0]' (LD) to 'display/replensihdisplay/displayleft2/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/replensihdisplay/displayleft3/display_r_reg[0]' (LD) to 'display/replensihdisplay/displayleft3/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/replensihdisplay/displayleft1/display_r_reg[0]' (LD) to 'display/replensihdisplay/displayleft1/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft2/display_r_reg[0]' (LD) to 'display/select/displayleft2/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft1/display_r_reg[0]' (LD) to 'display/select/displayleft1/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft3/display_r_reg[0]' (LD) to 'display/select/displayleft3/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/main/displayleft2/display_r_reg[0]' (LD) to 'display/main/displayleft2/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/main/displayleft1/display_r_reg[0]' (LD) to 'display/main/displayleft1/display_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'display/main/displayleft3/display_r_reg[0]' (LD) to 'display/main/displayleft3/display_r_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/endpaydisplay/changeten/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/paydisplay/transten_paid/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/paydisplay/tranten_cost/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/soldnumdisplay/goodnum/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/soldnumdisplay/displayleft2/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/earndisplay/at/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/replensihdisplay/displayleft1/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/replensihdisplay/displayleft2/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/replensihdisplay/displayleft3/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/select/displayleft2/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/select/displayleft1/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/select/displayleft3/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/main/displayleft2/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/main/displayleft1/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/main/displayleft3/display_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/endpaydisplay/changeten/display_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/paydisplay/transten_paid/display_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/paydisplay/tranten_cost/display_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/soldnumdisplay/displayleft2/display_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/earndisplay/at/display_r_reg[2] )
+INFO: [Synth 8-3886] merging instance 'display/endpaydisplay/changeten/display_r_reg[3]' (LD) to 'display/endpaydisplay/changeten/display_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'display/paydisplay/transten_paid/display_r_reg[3]' (LD) to 'display/paydisplay/transten_paid/display_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'display/paydisplay/tranten_cost/display_r_reg[3]' (LD) to 'display/paydisplay/tranten_cost/display_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'display/soldnumdisplay/displayleft2/display_r_reg[3]' (LD) to 'display/soldnumdisplay/displayleft2/display_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'display/earndisplay/at/display_r_reg[3]' (LD) to 'display/earndisplay/at/display_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'display/endpaydisplay/changeten/display_r_reg[4]' (LD) to 'display/endpaydisplay/changeten/display_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/paydisplay/transten_paid/display_r_reg[4]' (LD) to 'display/paydisplay/transten_paid/display_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/paydisplay/tranten_cost/display_r_reg[4]' (LD) to 'display/paydisplay/tranten_cost/display_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/soldnumdisplay/displayleft2/display_r_reg[4]' (LD) to 'display/soldnumdisplay/displayleft2/display_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/earndisplay/at/display_r_reg[4]' (LD) to 'display/earndisplay/at/display_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft2/display_r_reg[4]' (LD) to 'display/main/displayleft2/display_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft1/display_r_reg[4]' (LD) to 'display/main/displayleft1/display_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft3/display_r_reg[4]' (LD) to 'display/main/displayleft3/display_r_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/endpaydisplay/changeten/display_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/transten_paid/display_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/tranten_cost/display_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/soldnumdisplay/displayleft2/display_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/earndisplay/at/display_r_reg[6] )
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft3/display_r_reg[6]' (LD) to 'display/main/displayleft3/display_r_reg[6]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft2/display_r_reg[6]' (LD) to 'display/main/displayleft2/display_r_reg[6]'
+INFO: [Synth 8-3886] merging instance 'display/select/displayleft1/display_r_reg[6]' (LD) to 'display/main/displayleft1/display_r_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/endpaydisplay/changeten/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/endpaydisplay/changeone/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/transten_paid/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/transone_paid/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/tranten_cost/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/transone_cost/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/transten/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/transone/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/soldnumdisplay/displayleft1/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/soldnumdisplay/goodnum/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/soldnumdisplay/displayleft2/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/earndisplay/ao/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/earndisplay/at/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/replensihdisplay/displayleft1/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/replensihdisplay/displayleft2/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/replensihdisplay/displayleft3/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/select/displayleft2/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/select/displayleft1/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/select/displayleft3/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/main/displayleft2/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/main/displayleft1/display_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/main/displayleft3/display_r_reg[7] )
+INFO: [Synth 8-3886] merging instance 'display/failintopaydisplay/seg_out_r_reg[4]' (LD) to 'display/failintopaydisplay/seg_out_r_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/failintopaydisplay/seg_out_r_reg[7] )
+INFO: [Synth 8-3886] merging instance 'display/state_reg[0]' (FDCE) to 'display/state_reg[10]'
+INFO: [Synth 8-3886] merging instance 'display/state_reg[3]' (FDCE) to 'display/state_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/state_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/paydisplay/seg_out_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\display/earndisplay/seg_out_r_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft1/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft1/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft1/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft1/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft1/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft2/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft2/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft2/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft2/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft2/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft3/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft3/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft3/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft3/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft3/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft1/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft1/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft1/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft1/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft1/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft2/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft2/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft2/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft2/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft2/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft3/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft3/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft3/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft3/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/select/displayleft3/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/failintopaydisplay/seg_out_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transone/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transten/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transone_paid/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transten_paid/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transten_paid/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transten_paid/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transten_paid/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transten_paid/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/transone_cost/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/tranten_cost/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/tranten_cost/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/tranten_cost/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/tranten_cost/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/tranten_cost/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/paydisplay/seg_out_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/endpaydisplay/changeone/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/endpaydisplay/changeten/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/endpaydisplay/changeten/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/endpaydisplay/changeten/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/endpaydisplay/changeten/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/endpaydisplay/changeten/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft1/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft1/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft1/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft1/display_r_reg[4]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft1/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft1/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft1/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft2/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft2/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft2/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft2/display_r_reg[4]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft2/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft2/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft2/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft3/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft3/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft3/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft3/display_r_reg[4]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft3/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft3/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/replensihdisplay/displayleft3/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/earndisplay/ao/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/earndisplay/at/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/earndisplay/at/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/earndisplay/at/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/earndisplay/at/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/earndisplay/at/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/earndisplay/seg_out_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/displayleft1/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/displayleft2/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/displayleft2/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/displayleft2/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/displayleft2/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/displayleft2/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/goodnum/display_r_reg[7]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/goodnum/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/goodnum/display_r_reg[5]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/goodnum/display_r_reg[4]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/goodnum/display_r_reg[3]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/goodnum/display_r_reg[2]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/soldnumdisplay/goodnum/display_r_reg[1]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/state_reg[10]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft2/display_r_reg[4]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft1/display_r_reg[4]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft3/display_r_reg[4]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft3/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft2/display_r_reg[6]) is unused and will be removed from module machinex.
+WARNING: [Synth 8-3332] Sequential element (display/main/displayleft1/display_r_reg[6]) is unused and will be removed from module machinex.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'display/paydisplay/transone_paid/display_r_reg[0]' (LD) to 'display/paydisplay/transone_paid/display_r_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/paydisplay/transone_paid/display_r_reg[2] )
+INFO: [Synth 8-3886] merging instance 'display/soldnumdisplay/seg_out_r_reg[7]' (LD) to 'display/soldnumdisplay/seg_en_r_reg[5]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 740.230 ; gain = 510.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+----------------+---------------+----------------+
+|Module Name | RTL Object     | Depth x Width | Implemented As | 
++------------+----------------+---------------+----------------+
+|Bgm         | count_end      | 64x16         | LUT            | 
+|machinex    | used/count_end | 64x16         | LUT            | 
++------------+----------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 764.352 ; gain = 534.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 765.793 ; gain = 536.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   143|
+|3     |LUT1   |    35|
+|4     |LUT2   |   211|
+|5     |LUT3   |   124|
+|6     |LUT4   |   150|
+|7     |LUT5   |   371|
+|8     |LUT6   |   291|
+|9     |MUXF7  |    14|
+|10    |FDCE   |   555|
+|11    |FDPE   |    13|
+|12    |FDRE   |    30|
+|13    |FDSE   |     4|
+|14    |LD     |    59|
+|15    |LDC    |     7|
+|16    |IBUF   |    19|
+|17    |OBUF   |    22|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------+---------------------------+------+
+|      |Instance               |Module                     |Cells |
++------+-----------------------+---------------------------+------+
+|1     |top                    |                           |  2049|
+|2     |  display              |project_display_top        |  1500|
+|3     |    earndisplay        |earn                       |   106|
+|4     |    endpaydisplay      |endpay                     |   167|
+|5     |    failintopaydisplay |failintopay                |   112|
+|6     |    main               |display_main_machine       |   260|
+|7     |    paydisplay         |pay                        |   229|
+|8     |      transone         |num_display                |    17|
+|9     |      transten         |num_display_0              |    25|
+|10    |    replensihdisplay   |admin_replenish            |   159|
+|11    |    select             |display_custselect_machine |   326|
+|12    |    soldnumdisplay     |display_soldnum            |   111|
+|13    |  used                 |Bgm                        |   221|
++------+-----------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 809.824 ; gain = 580.035
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 254 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 809.824 ; gain = 224.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 809.824 ; gain = 580.035
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 242 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 15 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 66 instances were transformed.
+  LD => LDCE: 44 instances
+  LD => LDCE (inverted pins: G): 15 instances
+  LDC => LDCE: 7 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+215 Infos, 195 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 809.824 ; gain = 583.945
+INFO: [Common 17-1381] The checkpoint 'E:/Xlinx/save/finalproject/finalproject.runs/synth_1/machinex.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file machinex_utilization_synth.rpt -pb machinex_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 809.824 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 23 22:17:56 2020...

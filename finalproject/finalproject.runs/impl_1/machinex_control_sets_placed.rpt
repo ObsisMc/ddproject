@@ -1,0 +1,138 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Dec 23 22:18:30 2020
+| Host         : DESKTOP-413QC96 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file machinex_control_sets_placed.rpt
+| Design       : machinex
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    68 |
+| Unused register locations in slices containing registers |   304 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              69 |           32 |
+| No           | No                    | Yes                    |             375 |          148 |
+| No           | Yes                   | No                     |               7 |            7 |
+| Yes          | No                    | No                     |              20 |            7 |
+| Yes          | No                    | Yes                    |             197 |           66 |
+| Yes          | Yes                   | No                     |               4 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------------------+----------------------------------------+---------------------------------------------------------+------------------+----------------+
+|                       Clock Signal                       |              Enable Signal             |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++----------------------------------------------------------+----------------------------------------+---------------------------------------------------------+------------------+----------------+
+|  display/replensihdisplay/scan_cnt_reg[4]_LDC_i_1__0_n_0 |                                        | display/replensihdisplay/scan_cnt_reg[4]_LDC_i_2__0_n_0 |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[3]_LDC_i_1_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[1]_LDC_i_1_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[4]_LDC_i_2_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[4]_LDC_i_1_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[5]_LDC_i_2_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[3]_LDC_i_2_n_0              |                1 |              1 |
+|  display/select/scan_cnt_reg[5]_LDC_i_1_n_0              |                                        | display/select/scan_cnt_reg[5]_LDC_i_2_n_0              |                1 |              1 |
+|  display/select/scan_cnt_reg[3]_LDC_i_1_n_0              |                                        | display/select/scan_cnt_reg[3]_LDC_i_2_n_0              |                1 |              1 |
+|  display/select/scan_cnt_reg[1]_LDC_i_1_n_0              |                                        | display/select/scan_cnt_reg[1]_LDC_i_2_n_0              |                1 |              1 |
+|  display/replensihdisplay/clkout_reg_n_0                 |                                        | display/replensihdisplay/scan_cnt_reg[3]_LDC_i_2__0_n_0 |                1 |              1 |
+|  display/replensihdisplay/clkout_reg_n_0                 |                                        | display/replensihdisplay/scan_cnt_reg[4]_LDC_i_2__0_n_0 |                1 |              1 |
+|  display/replensihdisplay/clkout_reg_n_0                 |                                        | display/replensihdisplay/scan_cnt_reg[3]_LDC_i_1__0_n_0 |                1 |              1 |
+|  display/replensihdisplay/clkout_reg_n_0                 |                                        | display/replensihdisplay/scan_cnt_reg[4]_LDC_i_1__0_n_0 |                1 |              1 |
+|  display/select/scan_cnt_reg[4]_LDC_i_1_n_0              |                                        | display/select/scan_cnt_reg[4]_LDC_i_2_n_0              |                1 |              1 |
+|  display/replensihdisplay/scan_cnt_reg[3]_LDC_i_1__0_n_0 |                                        | display/replensihdisplay/scan_cnt_reg[3]_LDC_i_2__0_n_0 |                1 |              1 |
+|  display/select/scan_cnt_reg[2]_LDC_i_1_n_0              |                                        | display/select/scan_cnt_reg[2]_LDC_i_2_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/cnt[31]_i_2_n_0                          |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[1]_LDC_i_2_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[5]_LDC_i_1_n_0              |                1 |              1 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[2]_LDC_i_2_n_0              |                1 |              2 |
+|  display/select/clkout_reg_n_0                           |                                        | display/select/scan_cnt_reg[2]_LDC_i_1_n_0              |                1 |              2 |
+|  key_clk_BUFG                                            |                                        |                                                         |                1 |              2 |
+|  display/earndisplay/clkout_reg_n_0                      |                                        | display/earndisplay/cnt[31]_i_2__4_n_0                  |                1 |              3 |
+|  display/endpaydisplay/clkout_reg_n_0                    |                                        | display/endpaydisplay/cnt[31]_i_2__2_n_0                |                3 |              3 |
+|  display/failintopaydisplay/clkout_reg_n_0               |                                        | display/failintopaydisplay/cnt[31]_i_2__1_n_0           |                2 |              3 |
+|  display/soldnumdisplay/clkout_reg_n_0                   |                                        | display/soldnumdisplay/cnt[31]_i_2__5_n_0               |                2 |              3 |
+|  clk_IBUF_BUFG                                           | sellnum1                               |                                                         |                1 |              4 |
+|  clk_IBUF_BUFG                                           | income                                 |                                                         |                2 |              4 |
+|  display/paydisplay/clkout                               |                                        | display/paydisplay/onedigit[3]_i_3_n_0                  |                2 |              4 |
+|  clk_IBUF_BUFG                                           | sellnum3                               |                                                         |                1 |              4 |
+|  clk_IBUF_BUFG                                           | display/paydisplay/onedigit[3]_i_1_n_0 | display/paydisplay/onedigit[3]_i_3_n_0                  |                1 |              4 |
+|  clk_IBUF_BUFG                                           | display/paydisplay/tendigit[3]_i_1_n_0 | display/paydisplay/onedigit[3]_i_3_n_0                  |                1 |              4 |
+|  clk_IBUF_BUFG                                           | sellnum2                               |                                                         |                1 |              4 |
+|  key_clk_BUFG                                            | col_val                                |                                                         |                2 |              4 |
+|  key_clk_BUFG                                            | row_val[3]_i_2_n_0                     | row_val[3]_i_1_n_0                                      |                1 |              4 |
+|  clk_IBUF_BUFG                                           | endpay                                 | used/count_reg[16]_0                                    |                2 |              5 |
+|  display/replensihdisplay/clkout_reg_n_0                 |                                        | display/replensihdisplay/cnt[31]_i_2__3_n_0             |                2 |              5 |
+|  next_state_reg[5]_i_2_n_0                               |                                        |                                                         |                2 |              6 |
+|  clk_IBUF_BUFG                                           | used/state[5]_i_1_n_0                  | used/count_reg[16]_0                                    |                4 |              6 |
+|  clk_IBUF_BUFG                                           | display/main/offset[6]_i_1_n_0         | display/main/cnt[31]_i_2__0_n_0                         |                3 |              7 |
+|  clk_IBUF_BUFG                                           | display/select/offset[6]_i_1__0_n_0    | display/select/cnt[31]_i_2_n_0                          |                2 |              7 |
+|  display/paydisplay/transten/display_r_reg[6]_i_2__0_n_0 |                                        |                                                         |                3 |              7 |
+|  display/main/clkout_reg_n_0                             |                                        | display/main/cnt[31]_i_2__0_n_0                         |                3 |              7 |
+|  display/paydisplay/transone/display_r_reg[6]_i_2_n_0    |                                        |                                                         |                2 |              7 |
+|  display/select/seg_out_r_reg[7]_i_2__0_n_0              |                                        |                                                         |                2 |              8 |
+|  display/main/seg_out_r_reg[7]_i_2__1_n_0                |                                        |                                                         |                5 |              8 |
+|  display/replensihdisplay/seg_out_r_reg[7]_i_2_n_0       |                                        |                                                         |                4 |              8 |
+|  clk_IBUF_BUFG                                           |                                        |                                                         |                5 |              8 |
+|  key_clk_BUFG                                            | col[3]_i_1_n_0                         | used/count_reg[16]_0                                    |                4 |              8 |
+|  key_clk_BUFG                                            |                                        | used/count_reg[16]_0                                    |                4 |             12 |
+| ~display/paydisplay/p_0_in[3]                            |                                        |                                                         |                8 |             15 |
+|  clk_IBUF_BUFG                                           | used/count_end[15]_i_1_n_0             | used/count_reg[16]_0                                    |               11 |             16 |
+|  clk_IBUF_BUFG                                           | display/endpaydisplay/clkout           | display/endpaydisplay/cnt[31]_i_2__2_n_0                |                6 |             17 |
+|  clk_IBUF_BUFG                                           | display/select/clkout                  | display/select/cnt[31]_i_2_n_0                          |                5 |             17 |
+|  clk_IBUF_BUFG                                           | display/main/clkout                    | display/main/cnt[31]_i_2__0_n_0                         |                5 |             17 |
+|  clk_IBUF_BUFG                                           | used/count1[23]_i_1_n_0                | used/count_reg[16]_0                                    |                5 |             24 |
+|  clk_IBUF_BUFG                                           |                                        | display/paydisplay/onedigit[3]_i_3_n_0                  |                8 |             32 |
+|  clk_IBUF_BUFG                                           |                                        | display/select/cnt[31]_i_2_n_0                          |               12 |             32 |
+|  clk_IBUF_BUFG                                           |                                        | display/main/cnt[31]_i_2__0_n_0                         |               14 |             32 |
+|  clk_IBUF_BUFG                                           | countdowncnt                           | used/count_reg[16]_0                                    |                8 |             32 |
+|  clk_IBUF_BUFG                                           |                                        | display/replensihdisplay/cnt[31]_i_2__3_n_0             |               12 |             33 |
+|  clk_IBUF_BUFG                                           | display/paydisplay/multiplier_timer    | display/paydisplay/onedigit[3]_i_3_n_0                  |                9 |             33 |
+|  clk_IBUF_BUFG                                           |                                        | display/soldnumdisplay/cnt[31]_i_2__5_n_0               |               11 |             33 |
+|  clk_IBUF_BUFG                                           |                                        | display/earndisplay/cnt[31]_i_2__4_n_0                  |               14 |             33 |
+|  clk_IBUF_BUFG                                           |                                        | display/endpaydisplay/cnt[31]_i_2__2_n_0                |               11 |             33 |
+|  clk_IBUF_BUFG                                           |                                        | display/failintopaydisplay/cnt[31]_i_2__1_n_0           |               13 |             33 |
+|  clk_IBUF_BUFG                                           |                                        | used/count_reg[16]_0                                    |               19 |             57 |
++----------------------------------------------------------+----------------------------------------+---------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    20 |
+| 2      |                     3 |
+| 3      |                     4 |
+| 4      |                     9 |
+| 5      |                     2 |
+| 6      |                     2 |
+| 7      |                     5 |
+| 8      |                     5 |
+| 12     |                     1 |
+| 15     |                     1 |
+| 16+    |                    16 |
++--------+-----------------------+
+
+

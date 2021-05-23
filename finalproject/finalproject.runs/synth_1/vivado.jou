@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Dec 23 22:17:09 2020
+# Process ID: 5836
+# Current directory: E:/Xlinx/save/finalproject/finalproject.runs/synth_1
+# Command line: vivado.exe -log machinex.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source machinex.tcl
+# Log file: E:/Xlinx/save/finalproject/finalproject.runs/synth_1/machinex.vds
+# Journal file: E:/Xlinx/save/finalproject/finalproject.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source machinex.tcl -notrace
